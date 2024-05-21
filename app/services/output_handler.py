@@ -14,4 +14,4 @@ class OutputProcessor:
         self.output["labels"].append(dt_from)
 
     def get_output(self):
-        return self.output
+        return str(self.output)
