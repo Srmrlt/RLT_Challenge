@@ -1,0 +1,15 @@
+services:
+  mongo:
+    container_name: RTL_database
+    image: mongo:8.0-rc-jammy
+    env_file:
+      - .env
+    volumes:
+      - ./sampleDB/:/docker-entrypoint-initdb.d
+      - rtl_db:/data/db
+    ports:
+      - "27017:27017"
+    restart: always
+
+volumes:
+  rtl_db:
