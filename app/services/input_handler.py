@@ -43,7 +43,7 @@ class InputHandler:
             raise
 
     def validate_group_type(self):
-        valid_group_types = ["day", "week", "month", "year"]
+        valid_group_types = ["hour", "day", "week", "month", "year"]
         if self.data["group_type"] not in valid_group_types:
-            logger.error("Invalid group_type value. Expected values: 'day', 'week', 'month', 'year'")
-            raise ValueError("Invalid group_type value. Expected values: 'day', 'week', 'month', 'year'")
+            logger.error("Invalid group_type value. Expected values: 'hour', 'day', 'week', 'month', 'year'")
+            raise ValueError("Invalid group_type value. Expected values: 'hour', 'day', 'week', 'month', 'year'")

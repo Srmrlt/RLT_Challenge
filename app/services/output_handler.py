@@ -1,3 +1,4 @@
+import json
 import logging
 from datetime import datetime as dt
 
@@ -14,4 +15,4 @@ class OutputProcessor:
         self.output["labels"].append(dt_from)
 
     def get_output(self):
-        return str(self.output)
+        return json.dumps(self.output)
